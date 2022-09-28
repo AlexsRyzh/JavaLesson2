@@ -26,11 +26,9 @@ public class Task5 {
         String string = "01/01/2003";
         String regEx = "^(([1-2][0-9])|(3[0-1])|(0[1-9]))/(([1][0-2])|(0[1-9]))/((19[0-9]{2})|([2]\\d{3}))$";
         System.out.println(string);
-        Pattern pattern = Pattern.compile(regEx);
-        Matcher matcher = pattern.matcher(string);
-        if (matcher.matches()){
+        if (string.matches(regEx)){
             ArrayList<Integer> list = new ArrayList<>();
-            for (String item: matcher.group().split("/")){
+            for (String item: string.split("/")){
                 list.add(Integer.parseInt(item));
             }
             if (checkDate(list.get(0), list.get(1), list.get(2))){
