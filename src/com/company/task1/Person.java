@@ -30,9 +30,9 @@ public class Person {
         StringBuffer stringBuffer = new StringBuffer("");
         stringBuffer
                 .append(name)
-                .append(" ")
+                .append(name.length() > 0? " " : "")
                 .append(surname)
-                .append(" ")
+                .append(surname.length()>0? " " : "")
                 .append(otchestvo);
         return stringBuffer.toString();
     }
