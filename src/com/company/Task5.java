@@ -1,5 +1,4 @@
 package com.company;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -7,9 +6,7 @@ import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
-
 public class Task5 {
-
     public static boolean checkDate(int day, int month, int years){
         int[] days = new int[]{31,0,31,30,31,30,31,31,30,31,30,31};
         if (day > 29 && years%4==0 && month == 2){
@@ -23,7 +20,7 @@ public class Task5 {
     }
 
     public static void main(String[] args) {
-        String string = "01/01/2003";
+        String string = "29/02/2003";
         String regEx = "^(([1-2][0-9])|(3[0-1])|(0[1-9]))/(([1][0-2])|(0[1-9]))/((19[0-9]{2})|([2]\\d{3}))$";
         System.out.println(string);
         if (string.matches(regEx)){
@@ -36,7 +33,6 @@ public class Task5 {
             }else{
                 System.out.println("Не является");
             }
-
         }else{
             System.out.println("Не является");
         }
