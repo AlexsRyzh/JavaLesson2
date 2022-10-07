@@ -29,9 +29,11 @@ public class Person {
     public String getFIO(){
         StringBuffer stringBuffer = new StringBuffer("");
         stringBuffer
+                .append(name)
+                .append(" ")
                 .append(surname)
-                .append((name.length()>0)?" "+name.charAt(0)+".":" ")
-                .append((otchestvo.length()>0)?otchestvo.charAt(0)+".":"");
+                .append(" ")
+                .append(otchestvo);
         return stringBuffer.toString();
     }
 }
